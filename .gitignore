@@ -1,3 +1,5 @@
 .idea
 node_modules
+
+# npm run build target dir (next line will be removed by pre-release-branch-update GitHub action to be included in dist branch)
 dist
