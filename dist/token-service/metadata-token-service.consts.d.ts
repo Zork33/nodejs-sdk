@@ -1,0 +1,11 @@
+export declare const INITIALIZE_MAX_ATTEMPTS_OF_GET_TOKEN = 5;
+export declare const INITIALIZE_BACKOFF_SLOT_DURATION = 5;
+export declare const INITIALIZE_BACKOFF_CEILING = 3;
+export declare const INITIALIZE_BACKOFF_UNCERTAIN_RATIO = 0.5;
+export declare const GET_TOKEN_BACKOFF_SLOT_DURATION: number;
+export declare const GET_TOKEN_BACKOFF_CEILING = 1;
+export declare const GET_TOKEN_BACKOFF_UNCERTAIN_RATIO = 0.3;
+export declare const TOKEN_MINIMUM_LIFETIME_MARGIN_MS: number;
+export declare const TOKEN_LIFETIME_LEFT_TO_REFRESH_PCT = 90;
+export declare const TOKEN_LIFETIME_LEFT_TO_REPORT_ERROR_PCT = 80;
+export declare const ERROR_REPORT_INTERVAL_MS: number;
