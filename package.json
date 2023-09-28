@@ -20,6 +20,10 @@
   "files": [
     "dist"
   ],
+  "pre-commit": [
+    "build",
+    "add-dist"
+  ],
   "homepage": "https://github.com/yandex-cloud/nodejs-sdk#readme",
   "dependencies": {
     "@grpc/grpc-js": "^1.6.12",
@@ -33,6 +37,7 @@
     "nice-grpc": "^1.0.6",
     "nice-grpc-client-middleware-deadline": "^1.0.6",
     "node-abort-controller": "^3.1.1",
+    "pre-commit": "^1.2.2",
     "protobufjs": "^7.2.4",
     "utility-types": "^3.10.0"
   },
@@ -72,7 +77,8 @@
     "build": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" tsc -p .",
     "generate-code": "ts-node scripts/generate-code.ts",
     "prepare": "husky install",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "add-dist": "git add dist/*"
   },
   "engines": {
     "node": ">=12.0.0"
