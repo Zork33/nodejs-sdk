@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DEFAULT_LOGGER_PREFIX = exports.DEFAULT_OPTIONS = exports.DEFAULT_URL = exports.ERROR_REPORT_INTERVAL_MS = exports.TOKEN_LIFETIME_LEFT_TO_REPORT_ERROR_PCT = exports.TOKEN_LIFETIME_LEFT_TO_REFRESH_PCT = exports.TOKEN_MINIMUM_LIFETIME_MARGIN_MS = exports.GET_TOKEN_BACKOFF_UNCERTAIN_RATIO = exports.GET_TOKEN_BACKOFF_CEILING = exports.GET_TOKEN_BACKOFF_SLOT_DURATION = exports.INITIALIZE_BACKOFF_UNCERTAIN_RATIO = exports.INITIALIZE_BACKOFF_CEILING = exports.INITIALIZE_BACKOFF_SLOT_DURATION = exports.INITIALIZE_MAX_ATTEMPTS_OF_GET_TOKEN = void 0;
+exports.INITIALIZE_MAX_ATTEMPTS_OF_GET_TOKEN = 5;
+exports.INITIALIZE_BACKOFF_SLOT_DURATION = 5; // ms
+exports.INITIALIZE_BACKOFF_CEILING = 3; // up to 5 * (2 ** 3) = 40 ms
+exports.INITIALIZE_BACKOFF_UNCERTAIN_RATIO = 0.5;
+exports.GET_TOKEN_BACKOFF_SLOT_DURATION = 1 * 30 * 1000; // every 30 mins
+exports.GET_TOKEN_BACKOFF_CEILING = 1; // up to 30 * (2 ** 1) = 60 min
+exports.GET_TOKEN_BACKOFF_UNCERTAIN_RATIO = 0.3;
+exports.TOKEN_MINIMUM_LIFETIME_MARGIN_MS = 15 * 60 * 1000;
+exports.TOKEN_LIFETIME_LEFT_TO_REFRESH_PCT = 90;
+exports.TOKEN_LIFETIME_LEFT_TO_REPORT_ERROR_PCT = 80;
+exports.ERROR_REPORT_INTERVAL_MS = 1 * 60 * 1000;
+exports.DEFAULT_URL = 'http://169.254.169.254/computeMetadata/v1/instance/service-accounts/default/token';
+exports.DEFAULT_OPTIONS = {
+    headers: {
+        'Metadata-Flavor': 'Google',
+    },
+};
+exports.DEFAULT_LOGGER_PREFIX = 'metadata-auth';
